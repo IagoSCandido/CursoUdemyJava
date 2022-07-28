@@ -16,6 +16,7 @@ public class exercicio04 {
         horaTermino = sc.nextInt();
 
         sc.close();
+
         if (horaInicio < horaTermino) duracao = horaInicio - horaTermino;
         else duracao = 24 - horaInicio - horaTermino;
 
