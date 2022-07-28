@@ -3,7 +3,7 @@ package ExerciciosEstruturaSequencial;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class exercicio6 {
+public class exercicio06 {
      public static void main(String[] args) {
         //Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e
          //mostre:

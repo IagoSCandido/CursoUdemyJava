@@ -2,7 +2,7 @@ package ExerciciosEstruturaSequencial;
 
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class exercicio02 {
     //Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro
     //casas decimais.
     //Fórmula da área: area = π . raio2
