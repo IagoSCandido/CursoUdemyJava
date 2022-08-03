@@ -17,6 +17,5 @@ public class exercicio08 {
             System.out.println(fatorial);
         }
         sc.close();
-
     }
 }
