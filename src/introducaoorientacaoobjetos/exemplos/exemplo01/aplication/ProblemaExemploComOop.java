@@ -1,6 +1,6 @@
-package introducaoorientacaoobjetos.exemplos;
+package introducaoorientacaoobjetos.exemplos.exemplo01.aplication;
 
-import introducaoorientacaoobjetos.exemplos.entities.Triangle;
+import introducaoorientacaoobjetos.exemplos.exemplo01.entities.Triangle;
 
 import java.util.Locale;
 import java.util.Scanner;

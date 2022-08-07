@@ -1,4 +1,4 @@
-package introducaoorientacaoobjetos.exemplos.entities;
+package introducaoorientacaoobjetos.exemplos.exemplo01.entities;
 
 public class Triangle {
     public double a, b, c;

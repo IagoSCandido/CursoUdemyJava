@@ -1,4 +1,4 @@
-package introducaoorientacaoobjetos.exemplos;
+package introducaoorientacaoobjetos.exemplos.exemplo01.aplication;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -15,14 +15,14 @@ public class ProblemaExemploSemOop {
         c = 5.00;
         p = (a + b + c)/ 2;
         area1 = Math.sqrt(p * (p - a) * (p - b) * (p - c) );
-        System.out.println(area1);
         a2 = 7.50;
         b2 = 4.50;
         c2 = 4.02;
         p2 = (a2 + b2 + c2)/ 2;
         area2 = Math.sqrt(p2 * (p2 -a) * (p2 - b2) * (p2 - c2) );
 
-        if (area1 > area2) System.out.println(area1);
-        else System.out.println(area2);
+        System.out.printf("Larger area: %.2f",Math.max(area1, area2));
+//        if (area1 > area2) System.out.println(area1);
+//        else System.out.println(area2);
     }
 }
