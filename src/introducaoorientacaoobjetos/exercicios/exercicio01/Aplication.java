@@ -1,6 +1,6 @@
-package introducaoorientacaoobjetos.exercicios.exercico01;
+package introducaoorientacaoobjetos.exercicios.exercicio01;
 
-import introducaoorientacaoobjetos.exercicios.exercico01.entities.Rectangle;
+import introducaoorientacaoobjetos.exercicios.exercicio01.entities.Rectangle;
 
 import java.util.Locale;
 

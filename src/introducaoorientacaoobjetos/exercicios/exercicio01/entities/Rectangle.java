@@ -1,4 +1,4 @@
-package introducaoorientacaoobjetos.exercicios.exercico01.entities;
+package introducaoorientacaoobjetos.exercicios.exercicio01.entities;
 
 public class Rectangle {
     public double width;
