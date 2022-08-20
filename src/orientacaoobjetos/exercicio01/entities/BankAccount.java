@@ -38,9 +38,8 @@ public class BankAccount {
     }
 
     public double withdrawal(double amount) {
-        double tax = 5.0;
-        double balance = this.initialDeposit -= amount;
-        return balance - tax;
+        return this.initialDeposit -= amount - 5.0;
+
     }
 
     public String toString() {
