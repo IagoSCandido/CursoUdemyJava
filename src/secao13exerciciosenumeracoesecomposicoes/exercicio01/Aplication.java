@@ -1,25 +1,54 @@
 package secao13exerciciosenumeracoesecomposicoes.exercicio01;
 
+import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.Client;
+import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.Order;
+import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.OrderItem;
+import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.Product;
+import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.enums.OrderStatus;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class Aplication {
-    public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter department's name:");
-        System.out.println("Enter worker data:");
-        System.out.println("Name");
-        String name;
-        System.out.println("level:");
-        String level;
-        System.out.println("Base salary");
-        double baseSalay;
-        System.out.println("How many contracts to this worker?");
-        int contractsQuantity = 3;
-        for (int i = 0; i < contractsQuantity; i++) {
-            System.out.println("Enter contract #" + i + "data:");
+    public static void main(String[] args) throws ParseException {
+        test();
+    }
 
-        }
+    public static void test() throws ParseException {
+        SimpleDateFormat sdf =
+                new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdfWithTime =
+                new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+        Locale.setDefault(Locale.US);
+
+        // Client
+        System.out.println("Enteder client data: ");
+
+        Client client = new Client("Alex Green", "alex@gmail.com", sdf.parse("15/03/1985"));
+
+        // Product and Order
+        System.out.println("Enter order data: ");
+
+        Product p1 = new Product("TV", 1000.00);
+        OrderItem item1 = new OrderItem(1, p1.getPrice());
+
+        Product p2 = new Product("Mouse", 40.00);
+        OrderItem item2 = new OrderItem(2, p2.getPrice());
+
+        Order order1 = new Order(sdfWithTime.parse("20/04/2018 11:25:09"), OrderStatus.valueOf("PROCESSING"), item1, client, p1);
+
+        order1.addItem(item1);
+        order1.addItem(item2);
+
+
+        Order order2 = new Order(sdfWithTime.parse("20/04/2018 11:25:09"), OrderStatus.valueOf("PROCESSING"), item2, client, p2);
+        order2.addItem(item1);
+        order2.addItem(item2);
+
+
+        System.out.println(order1);
+
     }
 }

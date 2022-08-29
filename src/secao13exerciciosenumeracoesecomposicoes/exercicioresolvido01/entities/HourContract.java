@@ -1,11 +1,9 @@
-package secao13exerciciosenumeracoesecomposicoes.exercicio01.entities;
+package secao13exerciciosenumeracoesecomposicoes.exercicioresolvido01.entities;
 
 import java.util.Date;
 
-public class
-HourContract {
-    private
-    Date date;
+public class HourContract {
+    private Date date;
     private Double valuePerHour;
     private Integer hours;
 
@@ -42,6 +40,6 @@ HourContract {
         this.hours = hours;
     }
     public Double totalValue() {
-        return valuePerHour * hours;
+        return hours * valuePerHour;
     }
 }

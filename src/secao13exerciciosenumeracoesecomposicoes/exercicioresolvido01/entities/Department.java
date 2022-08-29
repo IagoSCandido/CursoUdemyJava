@@ -1,10 +1,7 @@
-package secao13exerciciosenumeracoesecomposicoes.exercicio01.entities;
+package secao13exerciciosenumeracoesecomposicoes.exercicioresolvido01.entities;
 
 public class Department {
     private String name;
-
-    public Department() {
-    }
 
     public Department(String name) {
         this.name = name;
