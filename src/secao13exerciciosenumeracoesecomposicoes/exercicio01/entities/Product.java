@@ -27,4 +27,11 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getName()).append(", $").append(getPrice());
+        return sb.toString();
+    }
 }

@@ -4,31 +4,28 @@ import secao13exerciciosenumeracoesecomposicoes.exercicio01.entities.enums.Order
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 public class Order {
-    private static final SimpleDateFormat sdf =
+    private static SimpleDateFormat sdf =
             new SimpleDateFormat("dd/MM/yyyy");
-    private static final SimpleDateFormat sdfWithTime =
-            new SimpleDateFormat ("dd/MM/yyyy HH:mm:ss");
+    private static SimpleDateFormat sdfWithTime =
+            new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     private Date moment;
     private OrderStatus status;
     private OrderItem item;
     private Client client;
     private Product product;
-    private final List<OrderItem> items = new ArrayList<>();
+    private List<OrderItem> items = new ArrayList<>();
 
     public Order() {
     }
 
-    public Order(Date moment, OrderStatus status, OrderItem item, Client client, Product product) {
+    public Order(Date moment, OrderStatus status, Client client) {
         this.moment = moment;
         this.status = status;
-        this.item = item;
         this.client = client;
-        this.product = product;
     }
 
     public Date getMoment() {
@@ -71,10 +68,6 @@ public class Order {
         this.product = product;
     }
 
-    public List<OrderItem> getItems() {
-        return items;
-    }
-
     public void addItem(OrderItem item) {
         items.add(item);
     }
@@ -98,17 +91,14 @@ public class Order {
                 .append("Order moment: ").append(sdfWithTime.format(moment)).append("\n")
                 .append("Order status: ").append(status).append("\n")
                 //CLient formatting
-                .append("Client: ").append(client.getName())
+                .append("Client: ").append(client).append("\n")
                 //Client date formatting
-                .append(" ").append("(").append(sdf.format(client.getBirthDate())).append(")")
-                .append(" - ").append(client.getEmail()).append("\n")
+//                .append(" ").append("(").append(sdf.format(getClient().getBirthDate())).append(")")
+//                .append(" - ").append(getClient().getEmail()).append("\n")
                 //Order items formatting
                 .append("Order items:").append("\n");
         for (OrderItem i : items) {
-            sb.append(product.getName()).append(" ")
-                    .append("$").append(product.getPrice())
-                    .append(",").append("Subtotal: $")
-                    .append(item.subtotal()).append("\n");
+            sb.append(i).append("\n");
         }
         sb.append("Total price: $").append(total());
         return sb.toString();
