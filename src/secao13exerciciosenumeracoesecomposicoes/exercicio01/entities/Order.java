@@ -92,9 +92,6 @@ public class Order {
                 .append("Order status: ").append(status).append("\n")
                 //CLient formatting
                 .append("Client: ").append(client).append("\n")
-                //Client date formatting
-//                .append(" ").append("(").append(sdf.format(getClient().getBirthDate())).append(")")
-//                .append(" - ").append(getClient().getEmail()).append("\n")
                 //Order items formatting
                 .append("Order items:").append("\n");
         for (OrderItem i : items) {

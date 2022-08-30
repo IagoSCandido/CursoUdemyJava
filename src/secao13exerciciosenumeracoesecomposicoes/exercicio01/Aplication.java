@@ -37,7 +37,7 @@ public class Aplication {
         // Reading OrderStatus;
         System.out.println("Enter order data: ");
         System.out.print("Status: ");
-        OrderStatus status= OrderStatus.valueOf(sc.next());
+        OrderStatus status = OrderStatus.valueOf(sc.next());
         System.out.println();
 
         // Reading Product, Orderitem, Order;
@@ -58,10 +58,7 @@ public class Aplication {
             OrderItem orderItem = new OrderItem(productQuantity, productPrice, product);
             order.addItem(orderItem);
         }
-
-
         sc.close();
-
         System.out.println(order);
     }
 
